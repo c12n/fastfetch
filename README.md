@@ -11,10 +11,18 @@ no data collection. What you see is computed on device, on the spot.
 
 ## Features
 
-- Device marketing name + hardware identifier (e.g. `iPhone 14 (iPhone14,7)`)
-- SoC name for A15/A16 devices, generic fallback elsewhere
+- Apple logo ASCII art, sized to fit the screen so it never wraps or skews
+- Device marketing name + hardware identifier (e.g. `iPhone 17 Pro Max (iPhone18,2)`)
+- SoC name for A15–A19 devices, generic fallback elsewhere
 - iOS version and full Darwin kernel version string
-- CPU core count, RAM, storage (total/free), battery level/state, uptime
+- CPU core count, display (points / native pixels / max Hz), RAM
+  (marketed size plus the figure iOS reports), storage using the same
+  volume-capacity values as iOS Settings, battery level/state, uptime
+- Beautiful grouped info cards with the label stacked above each value,
+  so no label ever wraps mid-word
+- Adaptive landscape layout: logo panel on the left, info on the right,
+  fastfetch-style — and rotating into landscape refreshes automatically
+- Battery readings stay live (refresh on level/state changes)
 - Refresh on demand, share the summary as text
 - Native Light/Dark Mode
 
