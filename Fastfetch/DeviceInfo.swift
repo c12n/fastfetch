@@ -127,7 +127,7 @@ enum DeviceInfo {
            total > 0 {
             return String(format: "%.1f GB total, %.1f GB available",
                           Double(total) / 1_000_000_000,
-                          available.doubleValue / 1_000_000_000)
+                          Double(available) / 1_000_000_000)
         }
         let attrs = try? FileManager.default.attributesOfFileSystem(forPath: NSHomeDirectory())
         let total = (attrs?[.systemSize] as? NSNumber)?.doubleValue ?? 0
